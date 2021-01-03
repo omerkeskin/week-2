@@ -11,10 +11,13 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omerkeskin/wtmb.git"
+    "url": "git+https://github.com/omerkeskin/week-2.git"
   },
   "bugs": {
-    "url": "https://github.com/omerkeskin/wtmb/issues"
+    "url": "https://github.com/omerkeskin/week-2.git/issues"
   },
-  "homepage": "https://github.com/omerkeskin/wtmb#readme"
+  "homepage": "https://github.com/omerkeskin/week-2.git#readme",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  }
 }

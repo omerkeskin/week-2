@@ -1,5 +1,6 @@
 const personUtil = require('./person');
 const meetupUtil = require('./meetup');
+const chalk = require('chalk');
 
 const Person = personUtil.Person;
 const Meetup = meetupUtil.Meetup;

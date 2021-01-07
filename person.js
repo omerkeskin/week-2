@@ -10,7 +10,7 @@ class Person {
     }
 
     attend(meetup){
-        this.meetups.push(meetup);
+        this.meetups.push(meetup.name);
         meetup.attendees.push(this);
     }
 }

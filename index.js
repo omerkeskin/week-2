@@ -1,9 +1,10 @@
-const personUtil = require('./person');
-const meetupUtil = require('./meetup');
-const chalk = require('chalk');
+const PersonUtil = require('./person');
+const MeetupUtil = require('./meetup');
+const Chalk = require('chalk');
+const DatabaseUtil = require('./database');
 
-const Person = personUtil.Person;
-const Meetup = meetupUtil.Meetup;
+const Person = PersonUtil.Person;
+const Meetup = MeetupUtil.Meetup;
 
 const wtmb = new Meetup("Women Techmakers in Berlin");
 
@@ -14,3 +15,7 @@ omer.greet(merve);
 omer.attend(wtmb);
 merve.attend(wtmb);
 wtmb.printAttendeeNames();
+DatabaseUtil.save('meetup.json', wtmb);
+DatabaseUtil.save('person.json', omer);
+const omerFromFile = DatabaseUtil.load('person.json') ;
+console.log(omerFromFile.name);

@@ -18,4 +18,7 @@ wtmb.printAttendeeNames();
 DatabaseUtil.save('meetup.json', wtmb);
 DatabaseUtil.save('person.json', omer);
 const omerFromFile = DatabaseUtil.load('person.json') ;
-console.log(omerFromFile.name);
+const meetupFromFile = DatabaseUtil.load('meetup.json') ;
+const newWtmb = new Meetup(meetupFromFile.name, meetupFromFile.attendees);
+newWtmb.printAttendeeNames();
+Meetup.create();

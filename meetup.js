@@ -1,11 +1,15 @@
 const chalk = require('chalk');
 class Meetup{
-    constructor(name) {
+    constructor(name, attendees = []) {
         this.name = name;
-        this.attendees = [];
+        this.attendees = attendees;
     }
     printAttendeeNames(){
-        this.attendees.forEach(person => {console.log(chalk.blue.bgRed.bold(person.name));console.log(person.age) });
+        this.attendees.forEach(person => {console.log(chalk.blue.bgYellow(person.name)) });
+    }
+
+    static create(){
+        console.log('From static create()');
     }
 }
 

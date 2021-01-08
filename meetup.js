@@ -8,8 +8,8 @@ class Meetup{
         this.attendees.forEach(person => {console.log(chalk.blue.bgYellow(person.name)) });
     }
 
-    static create(){
-        console.log('From static create()');
+    static create({name, attendees}){
+        return new Meetup(name, attendees);
     }
 }
 

@@ -13,6 +13,10 @@ class Person {
         this.meetups.push(meetup.name);
         meetup.attendees.push(this);
     }
+
+    static create({name, age}){
+       return new Person(name,age)
+    }
 }
 
 module.exports = {

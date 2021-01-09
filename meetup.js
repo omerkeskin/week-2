@@ -1,15 +1,20 @@
 const chalk = require('chalk');
+const PersonUtil = require('./person');
+const Person = PersonUtil.Person;
+
 class Meetup{
     constructor(name, attendees = []) {
         this.name = name;
         this.attendees = attendees;
     }
     printAttendeeNames(){
-        this.attendees.forEach(person => {console.log(chalk.blue.bgYellow(person.name)) });
+        this.attendees.forEach(person => {console.log(chalk.red(person.name)) });
     }
 
     static create({name, attendees}){
-        return new Meetup(name, attendees);
+        const meetup = new Meetup(name, attendees);
+        meetup.attendees = attendees.map(Person.create)
+        return meetup;
     }
 }
 
